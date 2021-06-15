@@ -1,0 +1,15 @@
+flask
+gunicorn
+traceback2
+nltk
+tweepy
+praw
+pandas
+joblib
+click
+itsdangerous
+Jinja2
+MarkupSafe
+itsdangerous
+Jinja2
+Werkzeug
