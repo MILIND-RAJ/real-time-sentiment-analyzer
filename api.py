@@ -4,7 +4,6 @@ import tweepy as tw
 import pandas as pd
 import re
 import nltk
-nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import praw
 
