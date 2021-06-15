@@ -1,2 +1,5 @@
 import nltk
-nltk.download('vader_lexicon')
+try:
+  nltk.data.find('vader_lexicon')
+except LookupError:
+  nltk.download('vader_lexicon')
