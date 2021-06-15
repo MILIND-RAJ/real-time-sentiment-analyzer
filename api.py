@@ -4,7 +4,10 @@ import tweepy as tw
 import pandas as pd
 import re
 import nltk
-import teq
+try:
+  nltk.data.find('vader_lexicon')
+except LookupError:
+  nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import praw
 
