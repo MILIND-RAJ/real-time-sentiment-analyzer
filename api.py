@@ -23,13 +23,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+    nltk.download('vader_lexicon')
+    from nltk.sentiment.vader import SentimentIntensityAnalyzer
     return render_template('home.html')
 
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
     if request.method == 'POST':
-        nltk.download('vader_lexicon')
-        from nltk.sentiment.vader import SentimentIntensityAnalyzer
         result = request.form['file_name']
         access_token="1238649645615566848-KxUwD20cSaLCzMxKdBu2ECWqsxgSnr"
         access_token_secret="g1jNl3iJU34oGfw2W5ixLDVF34jnPhFSZCFdbRRTBZcfw"
