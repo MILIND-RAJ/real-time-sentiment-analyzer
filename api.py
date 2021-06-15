@@ -4,6 +4,8 @@ import tweepy as tw
 import pandas as pd
 import re
 import nltk
+nltk.download('vader_lexicon')
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import praw
 
 def cleanResume(resumeText):
@@ -23,8 +25,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    nltk.download('vader_lexicon')
-    from nltk.sentiment.vader import SentimentIntensityAnalyzer
     return render_template('home.html')
 
 @app.route('/result',methods = ['POST', 'GET'])
