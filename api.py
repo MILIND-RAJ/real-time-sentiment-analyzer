@@ -5,9 +5,9 @@ import pandas as pd
 import re
 import nltk
 try:
-  nltk.data.find('vader_lexicon')
+  nltk.data.find('/app/nltk_data/vader_lexicon')
 except LookupError:
-  nltk.download('vader_lexicon')
+  nltk.download('/app/nltk_data/vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import praw
 
