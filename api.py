@@ -3,7 +3,6 @@ import traceback
 import tweepy as tw
 import pandas as pd
 import re
-nltk.download('vader_lexicon')
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import praw
