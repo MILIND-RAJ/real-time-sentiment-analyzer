@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify,render_template
 import traceback
 import tweepy as tw
 import pandas as pd
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import re
-import nltk
 import praw
 
 def cleanResume(resumeText):
@@ -23,9 +23,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    nltk.download('vader_lexicon')
     return render_template('home.html')
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
     if request.method == 'POST':
@@ -99,5 +98,4 @@ def result():
 if __name__ == '__main__':
     
     app.run()
-    
     
