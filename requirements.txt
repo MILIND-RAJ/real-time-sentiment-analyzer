@@ -1,7 +1,7 @@
 flask
 gunicorn
 traceback2
-nltk
+vaderSentiment
 tweepy
 praw
 pandas
